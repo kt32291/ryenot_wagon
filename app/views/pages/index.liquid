@@ -1,0 +1,35 @@
+---
+title: Home page
+published: true
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    {{ 'application.css' | stylesheet_tag }}
+    <title>{{ site.name }}</title>
+    <meta name="keywords" value="{{ site.meta_keywords }}" />
+    <meta name="description" value="{{ site.meta_description }}" />
+  </head>
+  <body>
+    <img src="/images/small_logo.png" style="width:275px; margin:20px;" />
+    <p>A blog about whiskey and where to drink it in Chicago</p>
+    <h1>{{ page.title }}</h1>
+    {% block 'main' %}
+      <section class="blog-index">
+        <ul>
+          {% for post in contents.posts %}
+            <a href="/{{ page.slug }}/{{ post._slug }}">
+            <li class="post-preview">
+              <p class="date">{{ post.posted_at | localized_date: "%b %d, %Y" }}</p>
+              <h2>{{ post.title }}</h2>
+              <p class="subheader">{{ post.teaser }}</p>
+              <h6 class="">Read More</h6>
+            </li>
+            </a>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,18 @@
+slug: distilleries
+description: Distillery Profiles
+label_field_name: name
+order_by: name
+order_direction: desc
+
+fields:
+- name:
+    label: Name
+    type: string
+    required: true
+    localized: false
+
+- description:
+    label: Description
+    type: text
+    required: true
+    localized: false

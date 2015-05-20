@@ -1,0 +1,38 @@
+slug: events
+description: Events
+label_field_name: title
+order_by: date
+order_direction: desc
+
+fields:
+- title:
+    label: Title
+    type: string
+    required: true
+    hint: Title of event
+    localized: false
+
+- description:
+    label: Description
+    type: text
+    required: true
+    hint: This is a short description of the event
+    localized: false
+
+- location:
+    label: Location
+    type: text
+    required: true
+    localized: false
+
+- address:
+    label: Address
+    type: string
+    required: true
+    localized: false
+
+- date:
+    label: Date of event
+    type: date_time
+    required: true
+    localized: false

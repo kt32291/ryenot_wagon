@@ -1,0 +1,22 @@
+---
+title: Whiskey types
+listed: true
+published: true
+---
+
+{% extends parent %}
+
+{% block main %}
+
+  <section class="blog-index">
+    <div>
+      {% for whiskey_type in contents.whiskey_types %}
+        <div class="post-preview">
+          <h2>{{ whiskey_type.name }}</h2>
+          <p class="subheader">{{ whiskey_type.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+- "Triple One":
+    pic: /images/whiskey-glasses.jpg
+    distillery: "Whistle Pig"
+    description: "My favorite whiskey of all time"
+    price: 88
+    whiskey_type: "Rye"
+    rating: 5
+
+- "Blue Label":
+    pic: /images/whiskey-glasses.jpg
+    distillery: "Johnny Walker"
+    description: "A delicious scotch blend"
+    price: 120
+    whiskey_type: "Blend"
+    rating: 5

@@ -1,0 +1,26 @@
+// Typography Variables
+// ========================================
+
+  // Font Families
+  $primary-sans-serif: 'Monda', sans-serif;;
+
+
+  // Sizes
+  $font-size-base: 14px;
+
+  $s-giga:    60px;
+  $s-mega:    48px;
+
+  $s-huge:    36px;
+  $s-large:   27px;
+  $s-bigger:  21px;
+  $s-big:     18px;
+  $s-medium:  16px;
+  $s-base: $font-size-base;
+  $s-small:   12px;
+  $s-tiny:    11px;
+
+  // Line Heights
+  $base-line-height: $font-size-base * 1.5;
+  $base-line-loose: $font-size-base * 1.9;
+  $base-line-small:  $font-size-base;

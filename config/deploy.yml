@@ -1,0 +1,9 @@
+# development:
+#   host: localhost:8080
+#   api_key: b12f964527e39f9824b0a294df71dd7d4d53ae33
+
+development:
+  host: localhost:8080
+  email: katie@launchpadlab.com
+  password: sunkissed
+

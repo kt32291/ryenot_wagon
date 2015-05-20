@@ -1,0 +1,29 @@
+---
+title: News
+listed: true
+published: true
+---
+
+{% extends parent %}
+
+{% block main %}
+
+  <section class="blog-index">
+    <div>
+      {% for post in contents.posts %}
+        <a href="/{{ page.slug }}/{{ post._slug }}">
+        <img src="{{ post.pic.url | theme_image_url | resize: 'x300' }}" alt="event_image" />
+        <div class="post-preview">
+          <p class="date">{{ post.posted_at | localized_date: "%b %d, %Y" }}</p>
+          <h2>{{ post.title }}</h2>
+          <p class="subheader">{{ post.teaser }}</p>
+          <h6 class="">Read More</h6>
+        </div>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
+{% endblock %}
+
+

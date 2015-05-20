@@ -1,0 +1,28 @@
+---
+title: Whiskeys
+listed: true
+published: true
+---
+
+{% extends parent %}
+
+{% block main %}
+
+  <section class="blog-index">
+    <div>
+      {% for whiskey in contents.whiskeys %}
+        <a href="/{{ page.slug }}/{{ whiskey._slug }}">
+        <img src="{{ whiskey.pic.url | theme_image_url | resize: 'x300' }}" alt="event_image" />
+        <div class="post-preview">
+          <h2>{{ whiskey.name }}</h2>
+          <h3>{{ whiskey.whiskey_type.name }}</h3>
+          <h4>{{ whiskey.distillery.name }}</h4>
+          <p class="subheader">{{ whiskey.description }}</p>
+          <h6 class="">{{ whiskey.rating }} / 5</h6>
+        </div>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
+{% endblock %}

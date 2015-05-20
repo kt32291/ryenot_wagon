@@ -1,0 +1,42 @@
+slug: posts
+description: Blog posts
+label_field_name: title
+order_by: posted_at
+order_direction: desc
+
+fields:
+- title: # The lowercase, underscored name of the field
+    label: Title # Human readable name of the field
+    type: string
+    required: true
+    hint: Title of the blog post
+    localized: false
+
+- pic:
+    label: Photo
+    type: file
+    required: false
+    hint: Featured photo
+    localized: false
+
+- teaser: # The lowercase, underscored name of the field
+    label: Teaser # Human readable name of the field
+    type: text
+    required: true
+    hint: This is a short description of the blog post seen on both the blog index and post page.
+    localized: false
+    # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
+
+- content: # The lowercase, underscored name of the field
+    label: Content # Human readable name of the field
+    type: text
+    required: true
+    hint: This is the content of the blog post.
+    localized: false
+    text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
+
+- posted_at: # The lowercase, underscored name of the field
+    label: Posted at # Human readable name of the field
+    type: date_time
+    required: true
+    localized: false

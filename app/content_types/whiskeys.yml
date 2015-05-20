@@ -1,0 +1,53 @@
+slug: whiskeys
+description: Whiskey reviews
+label_field_name: name
+order_by: name
+order_direction: desc
+
+fields:
+- name:
+    label: Title
+    type: string
+    required: true
+    localized: false
+
+- pic:
+    label: Photo
+    type: file
+    required: true
+    localized: false
+
+- distillery:
+    label: Distillery
+    type: belongs_to
+    required: true
+    class_name: distilleries
+    hint: Buffalo Trace, High West, etc.
+    localized: false
+
+- description:
+    label: Description
+    type: text
+    required: true
+    localized: false
+
+- price:
+    label: Price
+    type: integer
+    required: true
+    localized: false
+
+- whiskey_type:
+    label: Type
+    type: belongs_to
+    required: true
+    hint: Scotch, Bourbon, etc.
+    class_name: whiskey_types
+    localized: false
+
+- rating:
+    label: Rating
+    type: integer
+    required: true
+    hint: Rate it 1-5
+    localized: false

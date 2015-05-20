@@ -1,0 +1,47 @@
+// Form Styles Stylesheet
+// ========================================
+
+// Labels
+label{
+  @include font-type($primary-sans-serif, normal, 700);
+  @include rem(margin, 20px 0 4px);
+  @include s-small;
+  display: block;
+  text-transform: uppercase;
+}
+
+// Inputs
+#{$all-text-inputs},
+select,
+textarea{
+  @include appearance(none);
+  @include font-type($primary-sans-serif, normal, 300);
+  @include placeholder{ font-style: italic;  }
+  @include s-small;
+  border: 1px solid $white-med;
+  border-radius: 1px;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 8px 10px;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+
+  &.newsletter { padding: 8px 40px 8px 10px; }
+
+  &:focus{
+    @include box-shadow(0 0 0, transparent);
+    border-color: $blue-base;
+    outline: none;
+  }
+}
+
+textarea,
+textarea[type="text"]{ height: 100px; @include rem(margin-bottom, 12px); }
+
+input[type="submit"]{
+  @include s-small;
+  border: none;
+
+  &:hover{ cursor: pointer; }
+}
+
