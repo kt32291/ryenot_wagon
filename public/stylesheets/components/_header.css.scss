@@ -1,0 +1,17 @@
+header {
+  max-width: 960px;
+  margin: 0px auto 20px;
+  position: relative;
+  img {
+    float: left;
+  }
+  .right-tagline {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+  }
+  .clear {
+    clear: both;
+  }
+}

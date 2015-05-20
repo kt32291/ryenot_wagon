@@ -19,10 +19,11 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+aside ul li {
   @include font-type($primary-sans-serif, normal, 700);
   @include rem(margin-bottom, 12px);
-  color: $blue-base;
+  color: $black-base;
   line-height: 1.0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
