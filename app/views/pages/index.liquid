@@ -18,14 +18,14 @@ published: true
       <div class="clear"></div>
     </header>
     <main>
-      <aside>
+      <nav>
         <ul>
-          <li>About the Author</li>
+          <li><a href="/about">About the Author</a></li>
           <li><a href="/events">Events</a></li>
           <li><a href="/whiskeys">Whiskey Reviews</a></li>
-          <li>Watering Holes</li>
+          <li>Bars</li>
         </ul>
-      </aside>
+      </nav>
       <div class="main-content">
         {% block 'main' %}
         <section class="blog-index">
@@ -34,11 +34,15 @@ published: true
               <a href="/{{ page.slug }}/{{ post._slug }}">
               <li class="post-preview">
                 <p class="date">{{ post.posted_at | localized_date: "%b %d, %Y" }}</p>
-                <h4>{{ post.title }}</h4>
-                <p class="subheader">{{ post.teaser }}</p>
-                <h6 class="">Read More</h6>
+                <div class="post-content">
+                  <img src="{{ post.pic | resize: 'x300' }}" alt="event_image" />
+                  <h4>{{ post.title }}</h4>
+                  <p class="subheader">{{ post.teaser }}</p>
+                  <p>{{ post.content }}</p>
+                </div>
               </li>
               </a>
+              <div class="clear"></div>
             {% endfor %}
           </ul>
         </section>

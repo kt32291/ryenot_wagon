@@ -1,0 +1,13 @@
+.about-container {
+  img {
+    @include span-columns(5 of 12);
+  }
+  .about-content {
+    @include span-columns(7 of 12);
+  }
+
+  p {
+    text-indent: 50px;
+    line-height: $base-line-loose;
+  }
+}

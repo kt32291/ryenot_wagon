@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6,
-aside ul li {
+nav ul li {
   @include font-type($primary-sans-serif, normal, 700);
   @include rem(margin-bottom, 12px);
   color: $black-base;
@@ -38,7 +38,7 @@ h5 { font-size: $font-size-base * 1.25; @include media($tablet){ font-size: $fon
 h6 { font-size: $font-size-base; }
 
 p {
-  @include s-base;
+  @include s-medium;
   @include rem(margin-bottom, 12px);
   line-height: normal;
   color: $black-base;
@@ -75,6 +75,9 @@ sup {
 
 strong { font-weight: 700; }
 
-.subheader { @include s-medium; }
+.subheader {
+  @include s-medium;
+  font-style: italic;
+}
 
 .little-header { color: $white-base; opacity: 0.3; }

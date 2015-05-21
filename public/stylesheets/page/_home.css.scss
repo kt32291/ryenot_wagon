@@ -1,0 +1,27 @@
+.main-content {
+  margin-top: 40px;
+}
+
+.post-preview {
+  .post-content {
+    padding-left: 40px;
+    float: left;
+  }
+  img {
+    @include span-columns(5 of 12);
+    float: right;
+    margin: 15px;
+    border-radius: 10px;
+  }
+  .date {
+    display: block;
+    position: absolute;
+    transform-origin: 5% 70%;
+    transform: rotate(270deg);
+    margin-top: 100px;
+  }
+  p {
+    line-height: $base-line-loose;
+  }
+}
+

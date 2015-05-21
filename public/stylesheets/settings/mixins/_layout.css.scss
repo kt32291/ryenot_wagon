@@ -76,6 +76,17 @@ main {
   margin: 0px auto;
 }
 
+nav {
+  li {
+    display: inline-block;
+    padding-right: 25px;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
 
 // ------------------------------------------------------------
 // Override Neat's grid settings
