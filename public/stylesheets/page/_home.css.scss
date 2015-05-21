@@ -3,25 +3,30 @@
 }
 
 .post-preview {
+  margin-bottom: 40px;
   .post-content {
-    padding-left: 40px;
+    padding-left: 20px;
     float: left;
+    h4 {
+      margin-bottom: 30px;
+    }
   }
   img {
     @include span-columns(5 of 12);
     float: right;
-    margin: 15px;
-    border-radius: 10px;
+    margin: 0px 0px 30px 30px;
   }
   .date {
+    @include s-large;
+    font-family: 'Nothing You Could Do', cursive;
     display: block;
     position: absolute;
     transform-origin: 5% 70%;
     transform: rotate(270deg);
-    margin-top: 100px;
+    margin-top: 170px;
+    left: 215px;
   }
   p {
     line-height: $base-line-loose;
   }
 }
-

@@ -7,47 +7,52 @@ published: true
   <head>
     <meta charset="utf-8">
     {{ 'application.css' | stylesheet_tag }}
+    <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
     <title>{{ site.name }}</title>
     <meta name="keywords" value="{{ site.meta_keywords }}" />
     <meta name="description" value="{{ site.meta_description }}" />
   </head>
   <body>
     <header class="horizontal-divider">
-      <img src="/images/small_logo.png" style="width:275px; margin:20px 0px;" />
-      <p class="right-tagline subheader">A blog about whiskey and where to drink it in Chicago</p>
+      <a href="/">
+        <img src="/images/small_logo.png" style="width:275px; margin:20px 0px;" />
+      </a>
+      <p class="right-tagline subheader">A blog about whiskey, how it's made, and where to drink it</p>
       <div class="clear"></div>
     </header>
     <main>
-      <nav>
-        <ul>
-          <li><a href="/about">About the Author</a></li>
-          <li><a href="/events">Events</a></li>
-          <li><a href="/whiskeys">Whiskey Reviews</a></li>
-          <li>Bars</li>
-        </ul>
-      </nav>
-      <div class="main-content">
-        {% block 'main' %}
-        <section class="blog-index">
+      <div class="content-container">
+        <nav>
           <ul>
-            {% for post in contents.posts %}
-              <a href="/{{ page.slug }}/{{ post._slug }}">
-              <li class="post-preview">
-                <p class="date">{{ post.posted_at | localized_date: "%b %d, %Y" }}</p>
-                <div class="post-content">
-                  <img src="{{ post.pic | resize: 'x300' }}" alt="event_image" />
-                  <h4>{{ post.title }}</h4>
-                  <p class="subheader">{{ post.teaser }}</p>
-                  <p>{{ post.content }}</p>
-                </div>
-              </li>
-              </a>
-              <div class="clear"></div>
-            {% endfor %}
+            <li><a href="/about">About the Author</a></li>
+            <li>/</li><li><a href="/events">Events</a></li><li>/</li>
+            <li><a href="/whiskeys">Whiskey Reviews</a></li><li>/</li>
+            <li>Bars</li>
           </ul>
-        </section>
+        </nav>
+        <div class="main-content">
+          {% block 'main' %}
+          <section class="blog-index">
+            <ul>
+              {% for post in contents.posts %}
+                <div>
+                <li class="post-preview">
+                  <p class="date">{{ post.posted_at | localized_date: "%b %d, %Y" }}</p>
+                  <div class="post-content">
+                    <h4>{{ post.title }}</h4>
+                    <img src="{{ post.pic | resize: 'x300' }}" alt="event_image" />
+                    <p class="subheader">{{ post.teaser }}</p>
+                    <p>{{ post.content }}</p>
+                  </div>
+                </li>
+                </div>
+                <div class="clear"></div>
+              {% endfor %}
+            </ul>
+          </section>
+        </div>
+        {% endblock %}
       </div>
-      {% endblock %}
     </main>
   </body>
 </html>

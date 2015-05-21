@@ -10,14 +10,14 @@ published: true
 {% block "main" %}
 
   <section class="about-container">
-    <img src="" alt="katie">
+    <img src="/images/katie.jpg" alt="katie">
     <div class="about-content">
       <p class="subheader">
         {% editable_text "about_intro", format: "raw", rows: 5 %}Katie is a web developer living in Chicago, IL. Other than whiskey, she enjoys all things tech, design, and music. In her free time, she is busy tasting whiskey, hanging out with friends, or playing with her band.{% endeditable_text %}
       </p>
       {% editable_text "about_content", rows: 10 %}<p>"Ever since I was of legal drinking age, I have been further developing a taste for whiskey. I've felt that the more I taste and learn, the better my palette becomes. I have also over the years learned more about the process of distilling and aging whiskey. However, my learning has only just begun.</p><p>I started this blog to not only document my learning process, but also to encourage further exploration of this spirit I love so much, how it's made, and where to find it. It is my hope that I can develop a serious knowledge of all types of whiskey, and if along that journey I write something that interests you, all the better. So let's raise a glass."</p>{% endeditable_text %}
       <p>{% editable_text "sign_off", format: "raw", rows: 1 %}Cheers,{% endeditable_text %}</p>
-      <p>Katie Astrauskas</p>
+      <p class="signature">Katie Astrauskas</p>
     </div>
   </section>
 

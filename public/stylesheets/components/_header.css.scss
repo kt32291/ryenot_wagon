@@ -10,6 +10,8 @@ header {
     bottom: 0;
     right: 0;
     text-align: right;
+    font-family: 'Nothing You Could Do', cursive;
+    @include s-big;
   }
   .clear {
     clear: both;
